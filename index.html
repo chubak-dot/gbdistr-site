@@ -206,6 +206,80 @@
     .chip{font-size:12px;padding:8px 11px}
     .c2{right:-2%}
   }
+
+  /* ===== Responsive refinements ===== */
+  .careers-grid>*,.contact-grid>*,.hero-grid>*{min-width:0}
+  input,select,textarea{min-width:0;max-width:100%}
+  form>*,label{min-width:0}
+  html,body{overflow-x:hidden}
+  img,svg{max-width:100%}
+  nav.main a{white-space:nowrap}
+  .btn{white-space:nowrap}
+  @media (max-width:1240px){
+    nav.main,.tools .btn{display:none}
+    .burger{display:flex}
+    .mobile-nav.open{display:grid;gap:4px;padding:8px 24px 20px;border-top:1px solid var(--line)}
+    .mobile-nav a{padding:12px 0;font-weight:600;border-bottom:1px solid var(--line)}
+    .mobile-nav .btn{margin-top:12px;justify-content:center}
+  }
+  @media (max-width:1180px){
+    .c2{right:0}
+  }
+  @media (max-width:1000px){
+    .hero{padding:48px 0 64px}
+    .art{max-width:360px;margin-top:8px}
+    .stats{grid-template-columns:repeat(2,1fr)}
+  }
+  @media (max-width:640px){
+    .wrap{padding:0 18px}
+    .bar{height:64px;gap:10px}
+    .logo{font-size:16px;gap:8px}
+    .logo img{width:36px;height:36px}
+    .tools{gap:8px}
+    .langs button{padding:5px 8px;font-size:12px}
+    .burger{width:36px;height:36px}
+    .hero h1{font-size:clamp(28px,8.4vw,40px)}
+    .hero .actions{flex-direction:column;align-items:stretch}
+    .hero .actions .btn{justify-content:center}
+    .art{max-width:300px}
+    .chip{font-size:11px;padding:6px 9px;border-radius:10px}
+    .chip span{font-size:10px}
+    .c1{left:0}.c2{right:0}.c3{left:2%}.c4{right:2%}
+    .stats{grid-template-columns:1fr 1fr;gap:10px;margin-top:40px}
+    .stat{padding:16px}
+    .stat b{font-size:28px}
+    .stat p{font-size:13px}
+    h2{font-size:clamp(24px,7vw,32px)}
+    .card,.step{padding:22px 18px}
+    .person{flex-direction:column;align-items:center;text-align:center;padding:24px 18px}
+    .ava{width:96px;height:96px}
+    .filters{flex-wrap:nowrap;overflow-x:auto;padding-bottom:6px;margin-left:-18px;margin-right:-18px;padding-left:18px;padding-right:18px;scrollbar-width:none}
+    .filters::-webkit-scrollbar{display:none}
+    .filters button{flex:none}
+    .logo-grid{grid-template-columns:repeat(2,1fr);gap:10px}
+    .lt{padding:12px 10px 10px}
+    .lt .lg{height:60px}
+    .lt img{max-height:56px}
+    .lt .wm{font-size:16px}
+    .brands{grid-template-columns:1fr 1fr;gap:12px}
+    .brand .top{height:96px;font-size:18px}
+    .brand .body{padding:14px 14px 16px}
+    .brand p{font-size:13px}
+    .band{padding:28px 22px;border-radius:18px}
+    .band .btn{justify-content:center}
+    form{padding:20px;border-radius:18px}
+    .socials a{flex:1 1 auto;text-align:center}
+    footer .wrap{flex-direction:column;text-align:center}
+    .countries>span{font-size:13px}
+  }
+  @media (max-width:380px){
+    .logo>div{font-size:14px}
+    .brands{grid-template-columns:1fr}
+    .stat b{font-size:24px}
+  }
+  @media (min-width:1600px){
+    .wrap{max-width:1320px}
+  }
 </style>
 </head>
 <body>
@@ -253,7 +327,7 @@
       <div class="hero-grid">
         <div>
           <span class="eyebrow" data-i="hero_eyebrow">Дистрибьютор зоотоваров в Кыргызстане</span>
-          <h1 data-i="hero_title" data-html>Лучшие корма для кошек и собак — <em>в каждый зоомагазин</em></h1>
+          <h1 data-i="hero_title" data-html>Лучшие корма для ваших питомцев — <em>в каждый зоомагазин</em></h1>
           <p class="lead" data-i="hero_sub">ОсОО «Глобал брендс» импортирует корма, лакомства и наполнители из Европы и Азии и поставляет их в зоомагазины и ветеринарные клиники Кыргызстана.</p>
           <div class="actions">
             <a class="btn btn-accent" href="#brands" data-i="hero_btn1">Смотреть бренды</a>
@@ -497,7 +571,7 @@ ky:{
   nav_about:"Биз жөнүндө", nav_brands:"Бренддер", nav_partners:"Өнөктөштөргө", nav_contacts:"Байланыш",
   cta:"Өнөктөш болуу",
   hero_eyebrow:"Кыргызстандагы зоотоварлардын дистрибьютору",
-  hero_title:"Мышыктар жана иттер үчүн мыкты тоют — <em>ар бир зоодүкөнгө</em>",
+  hero_title:"Үй жаныбарларыңыз үчүн мыкты тоют — <em>ар бир зоодүкөнгө</em>",
   hero_sub:"«Глобал брендс» ЖЧК Германия, Украина, Россия жана Кытайдан тоют, лакомстволор, толтургучтар, ветпрепараттар жана кам көрүү каражаттарын импорттоп, Кыргызстандын зоодүкөндөрүнө жана ветклиникаларына жеткирет.",
   hero_btn1:"Бренддерди көрүү", hero_btn2:"Биз менен байланышуу",
   c_de:"Германия", c_own:"өз бренди", c_ua:"Украина",
@@ -596,7 +670,7 @@ ru:{
   nav_about:"О компании", nav_brands:"Бренды", nav_partners:"Партнёрам", nav_contacts:"Контакты",
   cta:"Стать партнёром",
   hero_eyebrow:"Дистрибьютор зоотоваров в Кыргызстане",
-  hero_title:"Лучшие корма для кошек и собак — <em>в каждый зоомагазин</em>",
+  hero_title:"Лучшие корма для ваших питомцев — <em>в каждый зоомагазин</em>",
   hero_sub:"ОсОО «Глобал брендс» импортирует корма, лакомства, наполнители, ветпрепараты и средства ухода из Германии, Украины, России и Китая и поставляет их в зоомагазины и ветклиники Кыргызстана.",
   hero_btn1:"Смотреть бренды", hero_btn2:"Связаться с нами",
   c_de:"Германия", c_own:"своя ТМ", c_ua:"Украина",
@@ -695,7 +769,7 @@ en:{
   nav_about:"About", nav_brands:"Brands", nav_partners:"Partners", nav_contacts:"Contact",
   cta:"Become a partner",
   hero_eyebrow:"Pet products distributor in Kyrgyzstan",
-  hero_title:"Great food for cats and dogs — <em>on every pet store shelf</em>",
+  hero_title:"The best food for your pets — <em>in every pet store</em>",
   hero_sub:"Global brands LLC imports pet food, treats, cat litter, vet medicines and grooming products from Germany, Ukraine, Russia and China and supplies pet stores and vet clinics across Kyrgyzstan.",
   hero_btn1:"See our brands", hero_btn2:"Contact us",
   c_de:"Germany", c_own:"own brand", c_ua:"Ukraine",
